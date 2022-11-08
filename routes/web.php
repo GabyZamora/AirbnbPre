@@ -30,6 +30,8 @@ function(){
     Route::resource('/foto', App\Http\Controllers\Admin\FotoController::class);
     Route::resource('/user', App\Http\Controllers\Admin\UserController::class);
     Route::resource('/cliente', App\Http\Controllers\Admin\ClienteController::class);
+    Route::resource('/servicio', App\Http\Controllers\Admin\ServicioController::class);
+
 });
 
 Route::group(['prefix'=>'host','middleware'=> ['auth','role:host']],

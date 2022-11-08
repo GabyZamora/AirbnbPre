@@ -7,5 +7,6 @@
         <li class="list-group-item"><a href="/admin/foto">Fotos</a></li>
         <li class="list-group-item"><a href="/admin/user">Usuarios</a></li>
         <li class="list-group-item"><a href="/admin/cliente">Clientes</a></li>
+        <li class="list-group-item"><a href="/admin/servicio">Servicios</a></li>
     </ul>
 </div>
