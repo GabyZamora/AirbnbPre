@@ -14,4 +14,8 @@ class Servicio extends Model
         'descripcion',
         'urlfoto'
     ];
+
+    public function Lugar(){
+        return $this->belongsToMany(Lugar::class, 'serv_lugars');
+    }
 }

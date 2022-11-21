@@ -56,7 +56,7 @@
                 
                 <div class="form-group">
                     <label for="precio">INGRESE PRECIO(EN DOLARES) </label>
-                    {!!Form::text('precio',null,['class'=>'form-control']) !!}
+                    {!!Form::value('precio',null,['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group">

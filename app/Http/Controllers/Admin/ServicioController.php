@@ -26,7 +26,7 @@ class servicioController extends Controller
 
             $imagen = $request->file('urlfoto');
             $nuevonombre = 'servicio_'.time().'.'.$imagen->guessExtension();
-            Image::make($imagen->getRealPath())->fit(900,400,function($constraint){ $constraint->upsize(); })->save( public_path('/img/servicio/'.$nuevonombre));
+            Image::make($imagen->getRealPath())->fit(200,200,function($constraint){ $constraint->upsize(); })->save( public_path('/img/servicio/'.$nuevonombre));
 
             $servicio->urlfoto = $nuevonombre;
         }

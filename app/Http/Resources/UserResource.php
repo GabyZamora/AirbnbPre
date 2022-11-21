@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Str;
 
-class CategoriaResource extends JsonResource
+class UserResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,9 +17,8 @@ class CategoriaResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'Nombre' => Str::of($this->nombre),
-            'Descripcion' => $this->descripcion,
-            'URL de foto' => $this->urlfoto
+            'Nombre' => Str::of($this->name),
+            'Email' => $this->email
             /*'ingreso' => $this->created_at->format('d-m-Y'),
             'modificacion' => $this->updated_at->format('d-m-Y')*/
         ];

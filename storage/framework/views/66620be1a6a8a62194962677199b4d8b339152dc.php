@@ -86,6 +86,7 @@
                 <div class="card">
                     <img src="/img/lugar/<?php echo e($item->urlfoto); ?>"/>
                     <h4><?php echo e($item->nombre); ?></h4>
+                    <h5>$<?php echo e($item->precio); ?></h5>
                     <a class="btn btn-sm btn-primary " href="<?php echo e(route('catalogo.show',$item->id)); ?>"><i class="fa fa-fw fa-eye"></i>Ver más...</a>
                 </div>
             </div>                        

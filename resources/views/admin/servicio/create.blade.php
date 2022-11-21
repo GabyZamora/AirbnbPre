@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="urlfoto">IMAGEN 900px X 400px</label> <br>
+                    <label for="urlfoto">IMAGEN MÍNIMO 200px X 200px</label> <br>
                     <img src="/img/post/foto.jpg">
                     {!! Form::file('urlfoto') !!}
                 </div>

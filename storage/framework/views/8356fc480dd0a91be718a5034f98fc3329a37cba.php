@@ -51,6 +51,24 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="numHuesped">INGRESE NÚMERO DE HÚESPEDES </label>
+                    <?php echo Form::text('numHuesped',null,['class'=>'form-control']); ?>
+
+                </div>
+
+                <div class="form-group">
+                    <?php echo Form::checkbox('mascotas',null,null); ?>    
+                    <label for="mascotas">¿SE ADMITEN MASCOTAS? </label>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="precio">INGRESE PRECIO(EN DOLARES) </label>
+                    <?php echo Form::text('precio',null,['class'=>'form-control']); ?>
+
+                </div>
+
+                <div class="form-group">
                     <label for="urlfoto">IMAGEN 900px X 400px</label> <br>
                     <img src="/img/lugar/foto.jpg">
                     <?php echo Form::file('urlfoto'); ?>

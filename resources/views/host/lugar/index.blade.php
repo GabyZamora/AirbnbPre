@@ -85,7 +85,7 @@
                 <div class="card">
                     <img src="/img/lugar/{{$item->urlfoto}}"/>
                     <h4>{{ $item->nombre }}</h4>
-                    <h5>{{ $item->precio }}</h5>
+                    <h5>${{ $item->precio }}</h5>
                     <a class="btn btn-sm btn-primary " href="{{ route('catalogo.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i>Ver más...</a>
                 </div>
             </div>                        

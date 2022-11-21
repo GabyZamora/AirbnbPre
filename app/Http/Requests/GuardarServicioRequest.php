@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ActualizarClienteRequest extends FormRequest
+class GuardarServicioRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,7 @@ class ActualizarClienteRequest extends FormRequest
     {
         return [
             "nombre" => "required",
-            "fechaNac" => "required", 
-            "dui" => "required|unique:clientes,dui,".$this->route('cliente')->id,
-            "telefono" => "required",
-            "direccion" => "required"
+            "descripcion" => "required"
         ];
     }
 }

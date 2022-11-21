@@ -20,6 +20,7 @@ class LugarResource extends JsonResource
             'Nombre' => Str::of($this->nombre),
             'Descripción' => $this->descripcion,
             'URL de foto' => $this->urlfoto,
+            'Categoria' => new CategoriaResource($this->Categoria),
             'Precio' => $this->precio,
             'Estado' => $this->estado,
             'Número de Huéspedes' => $this->numHuesped,

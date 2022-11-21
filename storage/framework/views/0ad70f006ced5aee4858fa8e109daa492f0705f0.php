@@ -8,16 +8,15 @@
             <?php echo Form::open(['route'=>['lugar.update',$lugar],'method'=>'PUT','files'=>true]); ?>
 
             <div class="jumbotron">
-                
                 <div class="form-group">
-                    <label for="descripcion">INGRESE DESCRIPCIÓN</label>
-                    <?php echo Form::textarea('descripcion',$lugar->descripcion,['class'=>'form-control','required']); ?>
+                    <label for="nombre">INGRESE NOMBRE</label>
+                    <?php echo Form::text('nombre',$lugar->nombre,['class'=>'form-control']); ?>
 
                 </div>
                 
                 <div class="form-group">
-                    <label for="nombre">INGRESE NOMBRE</label>
-                    <?php echo Form::textarea('nombre',$lugar->nombre,['class'=>'form-control']); ?>
+                    <label for="descripcion">INGRESE DESCRIPCIÓN</label>
+                    <?php echo Form::textarea('descripcion',$lugar->descripcion,['class'=>'form-control','required']); ?>
 
                 </div>
                 
@@ -51,6 +50,23 @@
                     <label for="estado">ESTADO</label>
                 </div>
 
+                <div class="form-group">
+                    <label for="numHuesped">NÚMERO DE HÚESPEDES</label>
+                    <?php echo Form::text('numHuesped', $lugar->numHuesped,['class'=>'form-control']); ?>
+
+                </div>
+
+                <div class="form-group">
+                    <?php echo Form::checkbox('mascotas',null); ?>
+
+                    <label for="mascotas">¿SE ADMITEN MASCOTAS?</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">PRECIO</label>
+                    <?php echo Form::text('precio',$lugar->precio,['class'=>'form-control']); ?>
+
+                </div>
                 <div class="form-group">
                     <label for="urlfoto">IMAGEN 900px X 400px</label> <br>
                     <img src="/img/lugar/<?php echo e($lugar->urlfoto); ?>">

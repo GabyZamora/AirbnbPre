@@ -28,8 +28,7 @@ class GuardarClienteRequest extends FormRequest
             "fechaNac" => "required", 
             "dui" => "required|unique:clientes,dui",
             "telefono" => "required",
-            "direccion" => "required",
-            "id_usuario" => "required"
+            "direccion" => "required"
         ];
     }
 }

@@ -16,6 +16,9 @@ class Lugar extends Model
         'latitud',
         'longitud',
         'estado',
+        'precio',
+        'numHuesped',
+        'mascotas',
         'user_id',
         'ruta_id',
         'categoria_id'
@@ -26,6 +29,9 @@ class Lugar extends Model
         return $this->hasMany("App\Models\Foto");
     }
 
+    public function Servicio(){
+        return $this->belongsToMany(Servicio::class, 'serv_lugars');
+    }
     public function User(){
         return $this->belongsTo("App\Models\User");
     }
@@ -37,4 +43,5 @@ class Lugar extends Model
     public function Categoria(){
         return $this->belongsTo("App\Models\Categoria");
     }
+
 }

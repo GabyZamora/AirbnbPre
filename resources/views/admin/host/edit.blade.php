@@ -10,7 +10,7 @@
 
                 <div class="form-group">
                     <label for="nombre">INGRESE NOMBRE</label>
-                    {!!Form::textarea('nombre',$host->nombre,['class'=>'form-control']) !!}
+                    {!!Form::text('nombre',$host->nombre,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
                     <label for="descripcion">INGRESE DESCRIPCIÓN</label>

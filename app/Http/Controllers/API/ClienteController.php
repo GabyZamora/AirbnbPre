@@ -18,7 +18,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return ClienteResource::collection(Cliente::all()) ;
+        return ClienteResource::collection(Cliente::with(['User'])->get()) ;
     }
 
     /**

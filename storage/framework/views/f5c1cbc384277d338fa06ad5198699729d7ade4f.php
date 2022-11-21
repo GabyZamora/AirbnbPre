@@ -7,7 +7,7 @@
         <div class="col-sm-10">
             <table class="table table-striped">
                 <thead>
-                    <th>Orden</th>
+                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Activo</th>
                     <th>Acción</th>
@@ -15,7 +15,7 @@
                 <tbody>
                     <?php $__empty_1 = true; $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <tr>
-                        <td><?php echo e($item->orden); ?></td>
+                        <td><?php echo e($item->id); ?></td>
                         <td><?php echo e($item->name); ?></td>
                         <td><?php echo e($item->activo); ?></td>
                         <td>

@@ -48,6 +48,7 @@
 
                 </div>
             </div>                <br>
+            <a href="javascript: history.go(-1)" class="btn btn-danger">CANCELAR</a>
             <?php echo Form::submit('GUARDAR',['class'=>'btn btn-success']); ?>
 
             <?php echo Form::close(); ?>

@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!!Form::select('mascotas',null) !!}
+                    {!!Form::checkbox('mascotas',null) !!}
                     <label for="mascotas">¿SE ADMITEN MASCOTAS?</label>
                 </div>
 

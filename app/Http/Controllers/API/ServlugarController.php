@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\GuardarLugarRequest;
-use App\Http\Requests\ActualizarLugarRequest;
-use App\Http\Resources\LugarResource;
+use App\Models\ServLugar;
 use App\Models\Lugar;
+use App\Models\Servicio;
 use Illuminate\Http\Request;
 
-class LugarController extends Controller
+class ServlugarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return LugarResource::collection(Lugar::with(['Categoria'])->get());
+        $lugar = new ServLugar();
+        $lugar->servicios()->attach($request->servicios);
     }
 
     /**

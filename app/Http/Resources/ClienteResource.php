@@ -22,6 +22,7 @@ class ClienteResource extends JsonResource
             'DUI' => $this->dui,
             'Telefono' => $this->telefono,
             'Direccion' => $this->direccion,
+            'Usuario' => new UserResource($this->User),
             /*'ingreso' => $this->created_at->format('d-m-Y'),
             'modificacion' => $this->updated_at->format('d-m-Y')*/
         ];

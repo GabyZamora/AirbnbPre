@@ -7,7 +7,7 @@
         <div class="col-sm-10">
             <table class="table table-striped">
                 <thead>
-                    <th>Orden</th>
+                    <th>Id</th>
                     <th>Nombre</th>
                     <th>Activo</th>
                     <th>Acción</th>
@@ -15,7 +15,7 @@
                 <tbody>
                     @forelse ($users as $item)
                     <tr>
-                        <td>{{$item->orden}}</td>
+                        <td>{{$item->id}}</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->activo}}</td>
                         <td>

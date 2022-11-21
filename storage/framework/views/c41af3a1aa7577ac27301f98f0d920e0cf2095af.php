@@ -8,37 +8,18 @@
             <?php echo Form::open(['route'=>['host.update',$host],'method'=>'PUT','files'=>true]); ?>
 
             <div class="jumbotron">
-                
-                <div class="form-group">
-                    <label for="title">INGRESE TITULO</label>
-                    <?php echo Form::text('title',$host->title,['class'=>'form-control','maxlength'=>'67', 'required']); ?>
 
-                </div>
-                
-                <div class="form-group">
-                    <label for="description">INGRESE DESCRIPTION</label>
-                    <?php echo Form::text('description',$host->description,['class'=>'form-control','maxlength'=>'155', 'required']); ?>
-
-                </div>
-                
-                <div class="form-group">
-                    <label for="descripcion">INGRESE DESCRIPCIÓN</label>
-                    <?php echo Form::textarea('descripcion',$host->descripcion,['class'=>'form-control','required']); ?>
-
-                </div>
-                
                 <div class="form-group">
                     <label for="nombre">INGRESE NOMBRE</label>
                     <?php echo Form::textarea('nombre',$host->nombre,['class'=>'form-control']); ?>
 
                 </div>
-                
                 <div class="form-group">
-                    <label for="orden">INGRESE ORDEN </label>
-                    <?php echo Form::text('orden',$host->orden,['class'=>'form-control']); ?>
+                    <label for="descripcion">INGRESE DESCRIPCIÓN</label>
+                    <?php echo Form::textarea('descripcion',$host->descripcion,['class'=>'form-control','required']); ?>
 
                 </div>
-                
+
                 <div class="form-group">
                     <label for="ruta_id">RUTA</label>
                     <?php echo Form::select('ruta_id',$rutas, $host->ruta_id,['class'=>'form-control']); ?>

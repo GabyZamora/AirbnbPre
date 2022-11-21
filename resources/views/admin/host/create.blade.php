@@ -37,7 +37,7 @@
 
                 
                 <div class="form-group">
-                    <label for="urllogo">IMAGEN 200px X 200px</label> <br>
+                    <label for="urllogo">LOGO 200px X 200px</label> <br>
                     <img src="/img/host/foto.jpg">
                     {!! Form::file('urllogo') !!}
                 </div>
