@@ -5,6 +5,12 @@
     <div class="row">
         <?php echo $__env->make('admin.menu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="col-sm-10">
+            <form action="<?php echo e(route('cliente.index')); ?>" method="GET">
+                <div class="btn-group">
+                    <input type="text" name="busqueda" class="form-control">
+                    <input type="submit" value="Buscar" class="btn btn-primary">
+                </div>
+            </form>
             <table class="table table-striped">
                 <thead>
                     <th>Id</th>
@@ -30,6 +36,11 @@
                         
                     <?php endif; ?>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><?php echo e($clientes->appends(['busqueda'=>$busqueda])); ?></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>

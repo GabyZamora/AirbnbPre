@@ -10,9 +10,13 @@ use Image;
 
 class servicioController extends Controller
 {
-    public function index(){
-        $servicios = Servicio::all();
-        return view("admin.servicio.index",compact("servicios"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $servicios = Servicio::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.servicio.index", compact('servicios','busqueda'));
+
     }
 
     public function create(){

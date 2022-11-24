@@ -12,9 +12,13 @@ use Auth;
 
 class HostController extends Controller
 {
-    public function index(){
-        $hosts = Hosts::all();
-        return view("admin.host.index",compact("hosts"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $hosts = Hosts::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.host.index", compact('hosts','busqueda'));
+
     }
 
     public function create(){

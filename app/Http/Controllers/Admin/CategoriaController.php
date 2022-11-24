@@ -10,9 +10,13 @@ use Image;
 
 class CategoriaController extends Controller
 {
-    public function index(){
-        $categorias = Categoria::all();
-        return view("admin.categoria.index",compact("categorias"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $categorias = Categoria::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.categoria.index", compact('categorias','busqueda'));
+
     }
 
     public function create(){

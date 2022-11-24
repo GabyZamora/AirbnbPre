@@ -11,10 +11,13 @@ use Image;
 
 class CatalogoController extends Controller
 {
-    public function index()
-    {
-        $lugares = Lugar::all();
-        return view("host.lugar.index",compact("lugares"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $lugars = Lugar::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("host.lugar.index", compact('lugars','busqueda'));
+
     }
 
     public function show($id)

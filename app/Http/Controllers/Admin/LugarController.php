@@ -13,9 +13,12 @@ use Auth;
 
 class LugarController extends Controller
 {
-    public function index(){
-        $lugares = Lugar::all();
-        return view("admin.lugar.index",compact("lugares"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $lugars = Lugar::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.lugar.index", compact('lugars','busqueda'));
 
     }
 

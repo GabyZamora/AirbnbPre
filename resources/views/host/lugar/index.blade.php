@@ -73,14 +73,21 @@
         color: #3498db;
 }
 </style>
-<div class="container-fluid">
+<div class="container-fluid">    
+    <form action="{{ route('lugar.index') }}" method="GET">
+        <div class="btn-group">
+            <input type="text" name="busqueda" class="form-control">
+            <input type="submit" value="Buscar" class="btn btn-primary">
+        </div>
+    </form>
         <div class="card">
             <div class="card-header">
                 <span id="card_title">
                     {{ __('Hospedajes') }}
                 </span>
-            </div>                   
-            @foreach ($lugares as $item)
+            </div>  
+                         
+            @foreach ($lugars as $item)
             <div class="contain">              
                 <div class="card">
                     <img src="/img/lugar/{{$item->urlfoto}}"/>
@@ -91,5 +98,10 @@
             </div>                        
                 @endforeach
         </div>
+        <tfoot>
+            <tr>
+                <td colspan="4">{{$lugars->appends(['busqueda'=>$busqueda])}}</td>
+            </tr>
+        </tfoot>
 </div>
 @endsection

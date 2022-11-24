@@ -17,6 +17,7 @@ Route::get('/', function () {
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/catalogo', App\Http\Controllers\Host\CatalogoController::class);
 
 Route::group(['prefix'=>'admin','middleware'=> ['auth','role:admin']],
 function(){
@@ -25,7 +26,6 @@ function(){
     Route::resource('/categoria', App\Http\Controllers\Admin\CategoriaController::class);
     Route::resource('/host', App\Http\Controllers\Admin\HostController::class);
     Route::resource('/lugar', App\Http\Controllers\Admin\LugarController::class);
-    Route::resource('/catalogo', App\Http\Controllers\Host\CatalogoController::class);
     Route::resource('/clientes', App\Http\Controllers\Host\RegistroClienteController::class);
     Route::resource('/foto', App\Http\Controllers\Admin\FotoController::class);
     Route::resource('/user', App\Http\Controllers\Admin\UserController::class);
@@ -34,10 +34,6 @@ function(){
 
 });
 
-Route::group(['prefix'=>'host','middleware'=> ['auth','role:host']],
-function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::resource('/catalogo', App\Http\Controllers\Host\CatalogoController::class);
     Route::resource('/clientes', App\Http\Controllers\Host\RegistroClienteController::class);
     Route::resource('/foto', App\Http\Controllers\Admin\FotoController::class);
-});

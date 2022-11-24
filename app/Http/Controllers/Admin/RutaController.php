@@ -10,9 +10,13 @@ use Image;
 
 class RutaController extends Controller
 {
-    public function index(){
-        $rutas = Ruta::all();
-        return view("admin.ruta.index",compact("rutas"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $rutas = Ruta::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.ruta.index", compact('rutas','busqueda'));
+
     }
 
     public function create(){

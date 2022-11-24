@@ -1,6 +1,6 @@
+@extends('layouts.app')
 
-
-<?php $__env->startSection('content'); ?>
+@section('content')
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,38 +73,34 @@
         color: #3498db;
 }
 </style>
-<div class="container-fluid">    
-    <form action="<?php echo e(route('lugar.index')); ?>" method="GET">
-        <div class="btn-group">
-            <input type="text" name="busqueda" class="form-control">
-            <input type="submit" value="Buscar" class="btn btn-primary">
-        </div>
-    </form>
+<div class="container-fluid">
         <div class="card">
             <div class="card-header">
                 <span id="card_title">
-                    <?php echo e(__('Hospedajes')); ?>
-
+                    {{ __('Hospedajes') }}
                 </span>
             </div>  
-                         
-            <?php $__currentLoopData = $lugars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <form action="{{ route('lugar.index') }}" method="GET">
+                <div class="btn-group">
+                    <input type="text" name="busqueda" class="form-control">
+                    <input type="submit" value="Buscar" class="btn btn-primary">
+                </div>
+            </form>                 
+            @foreach ($lugares as $item)
             <div class="contain">              
                 <div class="card">
-                    <img src="/img/lugar/<?php echo e($item->urlfoto); ?>"/>
-                    <h4><?php echo e($item->nombre); ?></h4>
-                    <h5>$<?php echo e($item->precio); ?></h5>
-                    <a class="btn btn-sm btn-primary " href="<?php echo e(route('catalogo.show',$item->id)); ?>"><i class="fa fa-fw fa-eye"></i>Ver más...</a>
+                    <img src="/img/lugar/{{$item->urlfoto}}"/>
+                    <h4>{{ $item->nombre }}</h4>
+                    <h5>${{ $item->precio }}</h5>
+                    <a class="btn btn-sm btn-primary " href="{{ route('catalogo.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i>Ver más...</a>
                 </div>
             </div>                        
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                @endforeach
         </div>
         <tfoot>
             <tr>
-                <td colspan="4"><?php echo e($lugars->appends(['busqueda'=>$busqueda])); ?></td>
+                <td colspan="4">{{$lugars->appends(['busqueda'=>$busqueda])}}</td>
             </tr>
         </tfoot>
 </div>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\AirbnbTesina\resources\views/host/lugar/index.blade.php ENDPATH**/ ?>
+@endsection

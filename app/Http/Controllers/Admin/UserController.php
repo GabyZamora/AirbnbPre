@@ -9,9 +9,13 @@ use Image;
 
 class UserController extends Controller
 {
-    public function index(){
-        $users = User::all();
-        return view("admin.user.index",compact("users"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $users = User::where('name','LIKE','%'.$busqueda.'%')
+        ->paginate(2);
+        return view("admin.user.index", compact('users','busqueda'));
+
     }
 
     public function store(Request $request){

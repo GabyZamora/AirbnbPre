@@ -9,9 +9,13 @@ use Illuminate\Support\Str;
 
 class ClienteController extends Controller
 {
-    public function index(){
-        $clientes = Cliente::all();
-        return view("admin.cliente.index",compact("clientes"));
+    public function index(Request $request){
+
+        $busqueda =  $request->busqueda;
+        $clientes = Cliente::where('nombre','LIKE','%'.$busqueda.'%')
+        ->paginate(5);
+        return view("admin.cliente.index", compact('clientes','busqueda'));
+
     }
 
 

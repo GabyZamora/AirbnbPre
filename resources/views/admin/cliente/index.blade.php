@@ -5,6 +5,12 @@
     <div class="row">
         @include('admin.menu')
         <div class="col-sm-10">
+            <form action="{{ route('cliente.index') }}" method="GET">
+                <div class="btn-group">
+                    <input type="text" name="busqueda" class="form-control">
+                    <input type="submit" value="Buscar" class="btn btn-primary">
+                </div>
+            </form>
             <table class="table table-striped">
                 <thead>
                     <th>Id</th>
@@ -27,6 +33,11 @@
                         
                     @endforelse
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">{{$clientes->appends(['busqueda'=>$busqueda])}}</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>
