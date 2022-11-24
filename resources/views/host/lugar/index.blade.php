@@ -86,7 +86,6 @@
                     {{ __('Hospedajes') }}
                 </span>
             </div>  
-                         
             @foreach ($lugars as $item)
             <div class="contain">              
                 <div class="card">

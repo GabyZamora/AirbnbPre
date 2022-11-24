@@ -18,6 +18,9 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/catalogo', App\Http\Controllers\Host\CatalogoController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/clientes', App\Http\Controllers\Host\RegistroClienteController::class);
+Route::resource('/foto', App\Http\Controllers\Admin\FotoController::class);
 
 Route::group(['prefix'=>'admin','middleware'=> ['auth','role:admin']],
 function(){
@@ -34,6 +37,3 @@ function(){
 
 });
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::resource('/clientes', App\Http\Controllers\Host\RegistroClienteController::class);
-    Route::resource('/foto', App\Http\Controllers\Admin\FotoController::class);
