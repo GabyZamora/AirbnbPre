@@ -42,6 +42,7 @@
     38 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
     39 => 'Spatie\\Permission\\PermissionServiceProvider',
     40 => 'Intervention\\Image\\ImageServiceProvider',
+    41 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
   ),
   'eager' => 
   array (
@@ -71,6 +72,7 @@
     23 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
     24 => 'Spatie\\Permission\\PermissionServiceProvider',
     25 => 'Intervention\\Image\\ImageServiceProvider',
+    26 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
   ),
   'deferred' => 
   array (
