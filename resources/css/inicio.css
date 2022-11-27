@@ -103,3 +103,34 @@
     border:  none;
     margin-top: 20px;
 }
+
+.card-footer {
+    width: auto;
+    height: auto;
+    padding: 8px 8px 8px 8px;
+    background: #f68930;
+    border-color: #f68930;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  .info {
+    width: 200px;
+    height: 28px;
+    color: #000000;
+    font-family: "Helvetica";
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .texto-fin {
+    width: 290px;
+    height: 24px;
+    color: #273248;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }

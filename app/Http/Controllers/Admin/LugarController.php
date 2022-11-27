@@ -11,6 +11,19 @@ use Illuminate\Support\Str;
 use Image;
 use Auth;
 
+//Trigs para galeria
+use App\Models\ImgGaleria;
+use Session;
+use Redirect;
+use App\Http\Requests\ItemCreateRequest;
+use App\Http\Requests\ItemUpdateRequest;
+use Illuminate\Support\Facades\Validator;
+use DB;
+use Input;
+use Storage; 
+use File; 
+
+
 class LugarController extends Controller
 {
     public function index(Request $request){
@@ -25,7 +38,7 @@ class LugarController extends Controller
     public function create(){
         $rutas= Ruta::orderBy('nombre','ASC')->pluck('nombre','id'); 
         $categorias= Categoria::orderBy('nombre','ASC')->pluck('nombre','id');
-        return view('admin.lugar.create',compact("rutas", "categorias"));       
+        return view('admin.lugar.create',compact("rutas", "categorias", 'fotos'));       
     }
 
 
@@ -108,4 +121,25 @@ class LugarController extends Controller
         $lugar->delete();
         return redirect('/admin/lugar');
     }
+
+
+    //Funciones para Imagees de la galeria
+    public function leer()
+    {
+        $lugar = Lugar::select('lugar_id','slug',
+        'nombre',
+        'descripcion',
+        'urlfoto',
+        'latitud',
+        'longitud',
+        'estado',
+        'precio',
+        'numHuesped',
+        'mascotas',
+        'user_id',
+        'ruta_id',
+        'categoria_id')->with('fotos::nombre')->get();
+        return view('admin.lugares.leer', compact('lugars'));
+    }
+    
 }

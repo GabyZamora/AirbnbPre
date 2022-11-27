@@ -10965,3 +10965,19 @@
 #31 /var/www/html/AirbnbPre/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
 #32 {main}
 "} 
+[2022-11-27 02:09:22] local.ERROR: syntax error, unexpected token "(" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"(\" at C:\\laragon\\www\\AirbnbPre\\app\\Models\\ImgGaleria.php:23)
+[stacktrace]
+#0 {main}
+"} 
+[2022-11-27 02:09:36] local.ERROR: syntax error, unexpected token "(" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"(\" at C:\\laragon\\www\\AirbnbPre\\app\\Models\\ImgGaleria.php:23)
+[stacktrace]
+#0 {main}
+"} 
+[2022-11-27 02:09:39] local.ERROR: syntax error, unexpected token "(" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"(\" at C:\\laragon\\www\\AirbnbPre\\app\\Models\\ImgGaleria.php:23)
+[stacktrace]
+#0 {main}
+"} 
+[2022-11-27 02:10:01] local.ERROR: syntax error, unexpected token "(" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"(\" at C:\\laragon\\www\\AirbnbPre\\app\\Models\\ImgGaleria.php:23)
+[stacktrace]
+#0 {main}
+"} 

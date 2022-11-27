@@ -7,72 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet"> 
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap-4.3.1.min.js"></script>
-<style>
-    .catalogo body{
-        font-family: 'Quattrocento';
-        letter-spacing: 0.03em;
-        line-height: 1.6;
-    }
+    <link rel="stylesheet" href="{{ asset('css/lugares.css') }}" />
 
-    .title{
-        text-align: center;
-        font-size: 40px;
-        color: #6a6a6a;
-        margin-top: 50px;
-        font-family: 'Quattrocento';
-    }
-
-    .contain{
-        width: auto;
-        margin-left: 70px;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .contain .card{
-        width: 240px;
-        height: auto;
-        border-radius: 8px;
-        border-color: #6a6a6a;
-        box-shadow: 0 2px 2px rbga(0, 0, 0.2);
-        overflow: hidden;
-        margin: 20px;
-        text-align: center;
-        transition: all 0.25s;
-    }
-
-    .contain .card:hover{
-        transform: translate(-15px);
-        box-shadow: 0 12px 16px rgba(0, 0, 0.2);
-    }
-
-    .contain .card img{
-        width: 250px;
-        height: 250px;
-    }
-
-    .contain .card h4{
-        font-weight: 600;
-        font-family: 'Quattrocento';
-    } 
-
-
-    .contain .card h5{
-        padding: 0 2rem;
-        font-weight:400;
-        font-size: 14px;
-        font-family: 'Quattrocento';
-    } 
-
-    .contain .card a{
-        font-weight: 500;
-        text-decoration: none;
-        color: #3498db;
-}
-</style>
 <div class="container-fluid">    
     <form action="{{ route('lugar.index') }}" method="GET">
         <div class="btn-group">

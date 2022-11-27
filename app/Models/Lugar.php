@@ -44,4 +44,10 @@ class Lugar extends Model
         return $this->belongsTo("App\Models\Categoria");
     }
 
+    //Funcion One to Many, registro para tener muchas imagenes
+    public function imagenesGaleria()
+    {
+        return $this->hasMany('App\ImgGaleria');
+    }
+
 }

@@ -1,0 +1,47 @@
+.card-header{ 
+	background-color: #d18527;
+	height: 70px;
+	padding: 20px;
+	text-align: center;
+
+}
+.titu{
+ 
+ font-size: 25px;
+}
+
+.imagen{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.container{
+	position: absolute;
+	left: 25%;
+	top: 25%;
+}
+
+.wrapper{
+	position: relative;
+	left: 15%;
+	top: 15%;
+}
+
+.input{
+	border-radius: 5px;
+	height: 40px;
+}
+
+#terminos{
+	margin-left: 75px;
+}
+
+.boton{
+	margin-left: 75px;
+	 background-color: #FC7643;
+	  color: #FFF; 
+	  border-radius: 5px;
+	  border: none;
+	  width: 400px;
+	  height: 40px;
+	}

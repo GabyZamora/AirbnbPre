@@ -102,6 +102,26 @@
         </div>
         
     </div>
+
+    <div class="card">
+        <div class="card-footer">
+            <p>
+        <a class="info" href="https://www.lipsum.com"> Sobre Nosotros </a>
+      </p>
+      <p>
+        <a class="info" href="https://www.lipsum.com"> Contactanos </a>
+      </p>
+      <p>
+        <a class="info" href="https://www.lipsum.com"> Otra Opcion </a>
+      </p>
+
+      <pre>
+        <hr color="black" size="5" />
+    </pre>
+      <p class="texto-fin">© 2022 Todos los derechos reservados</p>
+    </div>
+        </div>
+    </div>
 </body>
 </html>
 @endsection

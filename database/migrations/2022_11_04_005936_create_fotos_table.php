@@ -20,6 +20,8 @@ class CreateFotosTable extends Migration
             $table ->string('urlfoto',100);
             $table ->foreignId('lugar_id')->constrained();
             $table->timestamps();
+            //$table->integer('lugar_id')->references('id')->on('bicicletas')->onDelete('cascade');
+            //$table->softDeletes();
         });
     }
 
